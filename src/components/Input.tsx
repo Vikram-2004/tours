@@ -17,21 +17,24 @@ const Input: FC<InputProps> = ({
 }) => {
   return (
     <div>
-      <label htmlFor={label} className="block text-md font-medium pb-1">
+      <label
+        htmlFor={label}
+        className="block text-md font-medium pb-1 text-slate-500"
+      >
         {label}
       </label>
       <input
         type={type}
         value={value}
         className="block
-        rounded-lg
+        rounded-md
         px-4
         pt-2
         pb-2
         w-full
         text-gray-800
         bg-neutral-200
-        focus:border-blue-400
+        focus:border-b-green-400
         border-2
         border-white
         focus:outline-0
