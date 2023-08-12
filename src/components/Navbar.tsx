@@ -16,18 +16,18 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <Link href="/auth/login">
           <Button
             variant={null}
-            className="rounded-full text-lg text-white px-12 py-2 transform hover:bg-white hover:text-black duration-300
+            className="rounded-full text-md text-white px-12 py-2 transform hover:bg-white hover:text-black duration-300
            font-light max-md:px-6 max-md:text-md"
           >
-            Login
+            LOG IN
           </Button>
         </Link>
         <Link href="/auth/register">
           <Button
             variant="outline"
-            className="bg-[#444444ff] text-lg rounded-full px-12  py-2 font-light max-md:px-6 max-md:text-md"
+            className="bg-[#444444ff] text-md rounded-full px-12  py-2 font-light max-md:px-6 max-md:text-md"
           >
-            signup
+            SIGN UP
           </Button>
         </Link>
       </div>

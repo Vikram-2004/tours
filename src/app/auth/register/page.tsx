@@ -26,7 +26,7 @@ const Page: FC<pageProps> = ({}) => {
               <Input
                 value={name}
                 label="Your name"
-                onChange={(e: any) => setEmail(e.target.value)}
+                onChange={(e: any) => setName(e.target.value)}
                 type="text"
                 placeholder="Henry Avery"
               />
