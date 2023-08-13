@@ -3,13 +3,30 @@
 import Input from "@/components/Input";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { FC, useState } from "react";
 
 interface pageProps {}
 
 const Page: FC<pageProps> = ({}) => {
+  const router = useRouter();
   const [email, setEmail] = useState<string>("");
   const [pass, setPass] = useState<string>("");
+
+  const loginUser = async (e: React.FormEvent<EventTarget>) => {
+    e.preventDefault();
+    const data = {
+      email,
+      password: pass,
+    };
+    await signIn("credentials", {
+      ...data,
+      redirect: false,
+    });
+    console.log("hello");
+    router.push("/");
+  };
   return (
     <div className="sm:m-8 bg-white">
       <Navbar />
@@ -20,34 +37,37 @@ const Page: FC<pageProps> = ({}) => {
               LOG INTO YOUR ACCOUNT
             </h1>
           </div>
-          <div className="flex flex-col gap-6">
-            <div className="block">
-              <Input
-                value={email}
-                label="Your email"
-                onChange={(e: any) => setEmail(e.target.value)}
-                type="email"
-                placeholder="abc@gmail.com"
-              />
+          <form onSubmit={loginUser}>
+            <div className="flex flex-col gap-6">
+              <div className="block">
+                <Input
+                  value={email}
+                  label="Your email"
+                  onChange={(e: any) => setEmail(e.target.value)}
+                  type="email"
+                  placeholder="avery@email.com"
+                />
+              </div>
+              <div className="block pb-2">
+                <Input
+                  value={pass}
+                  label="Password"
+                  onChange={(e: any) => setPass(e.target.value)}
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div className="block ">
+                <Button
+                  variant="link"
+                  type="submit"
+                  className=" rounded-full text-white hover:shadow-2xl  transform duration-150 bg-green-500 px-9 py-1 hover:bg-green-600"
+                >
+                  SIGN IN
+                </Button>
+              </div>
             </div>
-            <div className="block pb-2">
-              <Input
-                value={pass}
-                label="Password"
-                onChange={(e: any) => setPass(e.target.value)}
-                type="password"
-                placeholder="Password"
-              />
-            </div>
-            <div className="block ">
-              <Button
-                variant="link"
-                className=" rounded-full text-white hover:shadow-2xl  transform duration-150 bg-green-500 px-9 py-1 hover:bg-green-600"
-              >
-                SIGN IN
-              </Button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
