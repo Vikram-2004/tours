@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { FC, FormEventHandler, useState } from "react";
+import { toast } from "react-hot-toast";
 
 interface pageProps {}
 
@@ -17,15 +18,24 @@ const Page: FC<pageProps> = ({}) => {
 
   const registerUser = async (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3000/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, password: pass }),
-    });
-    if (response.status !== 200) alert("INVALID INPUTS");
-    else router.push("/auth/login");
+    if (pass.length >= 6) {
+      const res = await fetch("http://localhost:3000/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password: pass }),
+      });
+      console.log(res);
+      if (res.ok && res.status === 200) {
+        toast.success("User registered successfully.");
+        router.push("/auth/login");
+      } else {
+        toast.error("Something went wrong");
+      }
+    } else {
+      toast.error("Password should exceed 6 characters.");
+    }
   };
 
   return (

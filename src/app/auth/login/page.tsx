@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { toast } from "react-hot-toast";
 import { FC, useState } from "react";
 
 interface pageProps {}
@@ -23,9 +24,19 @@ const Page: FC<pageProps> = ({}) => {
     await signIn("credentials", {
       ...data,
       redirect: false,
+    }).then((callback) => {
+      if (callback?.error) {
+        toast.error(callback.error);
+        setPass("");
+        setEmail("");
+      }
+      if (callback?.ok && !callback?.error) {
+        toast.success("Logged i successfully.");
+        setTimeout(() => {
+          router.push("/");
+        }, 3000);
+      }
     });
-    console.log("hello");
-    router.push("/");
   };
   return (
     <div className="sm:m-8 bg-white">
