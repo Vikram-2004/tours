@@ -1,7 +1,8 @@
 "use client";
 
+import Footer from "@/components/Footer-auth";
 import Input from "@/components/Input";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar-auth";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { FC, FormEventHandler, useState } from "react";
@@ -42,9 +43,9 @@ const Page: FC<pageProps> = ({}) => {
     <div className="sm:m-8 bg-white">
       <Navbar />
       <div className=" bg-gray-200 h-auto flex justify-center  w-auto">
-        <div className=" text-black bg-white px-16 py-16 rounded-sm sm:w-1/2 w-4/5 lg:w-[30rem] h-auto shadow-lg my-32">
+        <div className=" text-black bg-white px-16 py-16 rounded-sm sm:w-1/2 w-4/5 lg:w-[30rem] h-auto shadow-lg my-24">
           <div className="mb-8">
-            <h1 className=" font-semibold text-2xl  text-transparent  bg-clip-text bg-gradient-to-r from-green-400 to-green-600 ">
+            <h1 className=" slideInLeft font-medium monts text-2xl  text-transparent  bg-clip-text bg-gradient-to-r from-green-400 to-green-600 ">
               CREATE YOUR ACCOUNT
             </h1>
           </div>
@@ -76,10 +77,7 @@ const Page: FC<pageProps> = ({}) => {
                 />
               </div>
               <div className="block ">
-                <Button
-                  variant="link"
-                  className=" rounded-full text-white hover:shadow-2xl  transform duration-150 bg-green-500 px-9 py-1 hover:bg-green-600"
-                >
+                <Button className=" monts rounded-full text-white hover:shadow-2xl transition duration-150 bg-green-500 px-9 py-1    hover:-translate-y-3 ease-in hover:scale-105 hover:bg-green-600 delay-150">
                   REGISTER
                 </Button>
               </div>
@@ -87,6 +85,7 @@ const Page: FC<pageProps> = ({}) => {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

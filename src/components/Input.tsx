@@ -19,7 +19,7 @@ const Input: FC<InputProps> = ({
     <div>
       <label
         htmlFor={label}
-        className="block text-md font-medium pb-1 text-slate-500"
+        className="block text-md font-medium pb-1 text-slate-500 monts"
       >
         {label}
       </label>
@@ -41,6 +41,7 @@ const Input: FC<InputProps> = ({
         focus:ring-0
         appearance-none
         text-md
+        monts
         "
         placeholder={placeholder}
         onChange={onChange}

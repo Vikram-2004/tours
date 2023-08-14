@@ -1,12 +1,13 @@
 "use client";
 
 import Input from "@/components/Input";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar-auth";
 import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import { FC, useState } from "react";
+import Footer from "@/components/Footer-auth";
 
 interface pageProps {}
 
@@ -44,7 +45,7 @@ const Page: FC<pageProps> = ({}) => {
       <div className=" bg-gray-200 h-auto flex justify-center w-auto">
         <div className=" text-black bg-white px-16 py-16 rounded-sm sm:w-1/2 w-4/5 lg:w-[30rem] h-auto shadow-lg my-32">
           <div className="mb-8">
-            <h1 className=" font-semibold text-2xl  text-transparent  bg-clip-text bg-gradient-to-r from-green-400 to-green-600 ">
+            <h1 className="slideInLeft font-medium text-2xl  text-transparent  bg-clip-text bg-gradient-to-r from-green-400 to-green-600 monts">
               LOG INTO YOUR ACCOUNT
             </h1>
           </div>
@@ -70,9 +71,8 @@ const Page: FC<pageProps> = ({}) => {
               </div>
               <div className="block ">
                 <Button
-                  variant="link"
                   type="submit"
-                  className=" rounded-full text-white hover:shadow-2xl  transform duration-150 bg-green-500 px-9 py-1 hover:bg-green-600"
+                  className=" rounded-full text-white hover:shadow-2xl  duration-150 bg-green-500 px-9 py-1 hover:bg-green-600 monts ease-in hover:scale-105 transition delay-150 hover:-translate-y-3"
                 >
                   SIGN IN
                 </Button>
@@ -81,6 +81,7 @@ const Page: FC<pageProps> = ({}) => {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
