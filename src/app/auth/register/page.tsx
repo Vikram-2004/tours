@@ -42,7 +42,7 @@ const Page: FC<pageProps> = ({}) => {
   return (
     <div className="sm:m-8 bg-white">
       <Navbar />
-      <div className=" bg-gray-200 h-auto flex justify-center  w-auto">
+      <div className=" bg-gray-100 h-auto flex justify-center  w-auto">
         <div className=" text-black bg-white px-16 py-16 rounded-sm sm:w-1/2 w-4/5 lg:w-[30rem] h-auto shadow-lg my-24">
           <div className="mb-8">
             <h1 className=" slideInLeft font-medium monts text-2xl  text-transparent  bg-clip-text bg-gradient-to-r from-green-400 to-green-600 ">

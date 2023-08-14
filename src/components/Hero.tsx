@@ -1,15 +1,15 @@
 import { FC } from "react";
-import SlantedDiv from "./SlantedDiv";
+import SlantedDiv from "./SlantedDivlr";
 import { Button } from "./ui/button";
 
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
   return (
-    <div className="relative bg-[url('/images/sea.jpg')] bg-no-repeat bg-cover bg-center sm:h-[980px] h-[800px]">
-      <div className="bg-teal-400 bg-opacity-50 h-full w-full z-20">
+    <div className="relative bg-[url('/images/sea.jpg')] bg-no-repeat bg-cover bg-center sm:h-[980px] h-[800px] ">
+      <div className="bg-black bg-opacity-5 h-full w-full z-20">
         <div>
-          <h2 className="text-xl px-4 md:px-8 md:text-4xl font-normal monts  text-white py-8 slideInLeft">
+          <h2 className="text-xl px-4 md:px-8 md:text-4xl font-normal monts  text-white py-8 slideInLeft ">
             DEDSEC TOURS
           </h2>
         </div>

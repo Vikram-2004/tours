@@ -6,7 +6,7 @@ interface FooterauthProps {}
 
 const Footer: FC<FooterauthProps> = ({}) => {
   return (
-    <div className="bg-gray-200 ">
+    <div className="bg-gray-100 ">
       <div className="flex justify-end px-12 max-sm:justify-center">
         <div className="flex flex-col">
           <div className="pl-auto py-2 monts ">

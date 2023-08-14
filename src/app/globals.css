@@ -51,18 +51,42 @@
     opacity: 1;
   }
 }
-@keyframes fadein {
+@keyframes slideFromRight {
   from {
+    transform: translateX(25px);
     opacity: 0;
   }
   to {
+    transform: translateX(0px);
     opacity: 1;
   }
 }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .fadeInAni {
-  animation: fadein 0.5s ease;
+  animation: fadein 0.5s ease-in;
 }
 
+.fadeOutAi {
+  animation: fadeout 0.5s ease-out;
+}
+.slideInRight {
+  animation: slideFromRight 0.6s ease-in;
+}
 .slideInBottom {
   animation: slideFromBottom 0.6s ease-in;
 }
@@ -75,7 +99,7 @@
 }
 
 /* css for slanted div */
-.custom-shape-divider-bottom-1692003488 {
+.custom-shape-divider-bottom-1692032217 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -85,31 +109,35 @@
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1692003488 svg {
+.custom-shape-divider-bottom-1692032217 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 172px;
+  height: 150px;
   transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1692003488 .shape-fill {
+.custom-shape-divider-bottom-1692032217 .shape-fill {
   fill: #f3f4f6;
 }
-
-/** For tablet devices **/
-@media (min-width: 768px) and (max-width: 1023px) {
-  .custom-shape-divider-bottom-1692003488 svg {
-    width: calc(100% + 1.3px);
-    height: 200px;
-  }
-}
-
-/** For mobile devices **/
-@media (max-width: 767px) {
-  .custom-shape-divider-bottom-1692003488 svg {
-    width: calc(100% + 1.3px);
-    height: 137px;
-  }
-}
 /* end of css for slanted div */
+.custom-shape-divider-top-1692032392 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1692032392 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1692032392 .shape-fill {
+  fill: #f3f4f6;
+}

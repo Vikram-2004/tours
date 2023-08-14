@@ -1,10 +1,10 @@
 import { FC } from "react";
 
-interface SlantedDivProps {}
+interface SlantedDivrlProps {}
 
-const SlantedDiv: FC<SlantedDivProps> = ({}) => {
+const SlantedDivrl: FC<SlantedDivrlProps> = ({}) => {
   return (
-    <div className="custom-shape-divider-bottom-1692003488">
+    <div className="custom-shape-divider-top-1692032392">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -20,4 +20,4 @@ const SlantedDiv: FC<SlantedDivProps> = ({}) => {
   );
 };
 
-export default SlantedDiv;
+export default SlantedDivrl;
