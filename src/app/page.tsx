@@ -1,21 +1,14 @@
 "use client";
+import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const { data: session, status } = useSession();
-  const router = useRouter();
-  console.log(session);
-  const handleSignOut = async () => {
-    signOut({ redirect: false });
-    router.push("/");
-  };
   return (
-    <div>
-      <p>{JSON.stringify(session)}</p>
-      <Button onClick={handleSignOut}>signout</Button>
-      <h1>hello</h1>
+    <div className="sm:m-8 bg-gray-100 overflow-x-hidden">
+      <Hero />
+      <div className="h-screen"></div>
     </div>
   );
 }
