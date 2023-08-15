@@ -19,14 +19,22 @@ const Input: FC<InputProps> = ({
     <div>
       <label
         htmlFor={label}
-        className="block text-md font-medium pb-1 text-slate-500 monts"
+        className="block text-md font-medium pb-1 text-slate-500 monts
+        peer-invalid:visible
+       peer-invalid:text-pink-600
+       "
       >
         {label}
       </label>
       <input
         type={type}
         value={value}
-        className="block
+        className="
+        invalid:border-b-2
+        invalid:border-red-500 invalid:text-red-600
+      focus:invalid:border-red-500 focus:invalid:ring-red-500
+        peer
+        block
         rounded-md
         px-4
         pt-2

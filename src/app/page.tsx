@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className="relative ">
       <Navigation />
-      <div className="sm:mx-8 bg-gray-100 overflow-x-hidden relative">
-        <div className="sm:my-8">
+      <div className="bg-gray-100 overflow-x-hidden relative">
+        <div className="sm:m-8">
           <Hero />
           <PopularTours />
           <Feature />

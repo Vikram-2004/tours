@@ -21,7 +21,9 @@ export default function RootLayout({
       <Provider>
         <body className={inter.className}>
           <ToasterContext />
-          {children}
+          <div className="selection:bg-fuchsia-300 selection:text-fuchsia-900">
+            {children}
+          </div>
         </body>
       </Provider>
     </html>

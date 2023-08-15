@@ -6,8 +6,8 @@ interface populatToursProps {}
 
 const PopularTours: FC<populatToursProps> = ({}) => {
   return (
-    <div className="py-16 h-auto">
-      <h1 className="text-center text-5xl outfit pb-16  slideInTop px-4">
+    <div className="py-24 h-auto">
+      <h1 className="text-center text-5xl outfit pb-24  slideInTop px-4">
         MOST POPULAR TOURS
       </h1>
       <div className="h-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-16">
@@ -48,8 +48,8 @@ const PopularTours: FC<populatToursProps> = ({}) => {
         </div>
       </div>
       <div className="flex justify-center w-full mt-16">
-        <Button className="rounded-full text-white hover:shadow-2xl text-xl duration-150 bg-green-500 px-16 py-8 hover:bg-green-600 monts ease-in hover:scale-105 transition delay-150 hover:-translate-y-3 mx-auto slideInBottom">
-          DISCOVER TOURS
+        <Button className="rounded-full text-white hover:shadow-2xl text-xl duration-150 bg-green-500 px-16 py-8 hover:bg-green-600 monts ease-in hover:scale-105 transition delay-150 hover:-translate-y-3 mx-auto slideInBottom peer">
+          DISCOVER TOURS <span className=" peer-hover:hidden"> &rarr;</span>
         </Button>
       </div>
     </div>
