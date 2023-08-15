@@ -35,8 +35,7 @@ const Input: FC<InputProps> = ({
         text-gray-800
         bg-neutral-200
         focus:border-b-green-400
-        border-2
-        border-white
+        focus:border-b-2
         focus:outline-0
         focus:ring-0
         appearance-none

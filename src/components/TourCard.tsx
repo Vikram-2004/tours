@@ -20,7 +20,7 @@ const TourCard: FC<TourCardProps> = ({
   imguri,
 }) => {
   return (
-    <div className="mx-auto md:w-[80%] max-md:w-[85%] rounded-lg shadow-2xl slideInTop duration-300 transition hover:-translate-y-6 delay-100">
+    <div className="mx-auto xl:w-[70%] lg:[85%] md:w-[80%] max-md:w-[85%] rounded-lg shadow-2xl slideInTop duration-300 transition hover:-translate-y-6 delay-100">
       <div className="relative bg-zinc-50">
         <img src={imguri} alt="" className=" rounded-t-lg w-full" />
         <h1 className="text-2xl text-center  pt-8 pb-2">{title}</h1>
