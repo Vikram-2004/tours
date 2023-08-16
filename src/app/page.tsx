@@ -5,6 +5,7 @@ import PopularTours from "@/components/PopularTours";
 import Feature from "@/components/Features";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <div className="bg-gray-100 overflow-x-hidden relative">
         <div className="sm:m-8">
           <Hero />
-          <PopularTours />
+          <About />
           <Feature />
           <PopularTours />
           <Newsletter />

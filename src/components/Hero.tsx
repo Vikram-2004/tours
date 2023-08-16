@@ -1,6 +1,7 @@
 import { FC } from "react";
 import SlantedDiv from "./SlantedDivlr";
 import { Button } from "./ui/button";
+import Reveal from "@/lib/Reveal";
 
 interface HeroProps {}
 

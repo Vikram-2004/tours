@@ -1,16 +1,17 @@
 import { FC } from "react";
 import { Button } from "./ui/button";
 import TourCard from "./TourCard";
+import Reveal from "@/lib/Reveal";
 
 interface populatToursProps {}
 
 const PopularTours: FC<populatToursProps> = ({}) => {
   return (
-    <div className="py-24 h-auto">
+    <div className="py-24 h-auto" id="popular">
       <h1 className="text-center text-5xl outfit pb-24  slideInTop px-4">
         MOST POPULAR TOURS
       </h1>
-      <div className="h-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-16">
+      <div className="h-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-16 ">
         <div className="">
           <TourCard
             days={3}
@@ -33,7 +34,7 @@ const PopularTours: FC<populatToursProps> = ({}) => {
             imguri="/images/beach.avif"
           />
         </div>
-        <div className=" max-lg:col-span-2  max-md:col-span-1">
+        <div className=" max-lg:col-span-2  max-md:col-span-1 ">
           <div className="max-lg:w-1/2 max-md:w-full max-lg:mx-auto max-sm:hidden">
             <TourCard
               days={10}
